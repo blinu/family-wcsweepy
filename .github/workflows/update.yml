@@ -1,0 +1,37 @@
+name: Update World Cup results
+
+# Runs every 2 hours, and you can also trigger it by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch latest results
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: node scripts/fetch-results.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "sweepstake-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet results.json; then
+            git add results.json
+            git commit -m "Update results $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          else
+            echo "No change."
+          fi
