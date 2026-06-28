@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T20:59:11.580Z",
+  "updatedAt": "2026-06-28T23:00:36.954Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -387,8 +387,8 @@
       {
         "a": "South Africa",
         "b": "Canada",
-        "sa": "",
-        "sb": "",
+        "sa": 0,
+        "sb": 1,
         "date": "2026-06-28T19:00:00Z"
       },
       {
