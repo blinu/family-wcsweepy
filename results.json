@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T18:07:34.989Z",
+  "updatedAt": "2026-06-29T21:24:49.665Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -394,8 +394,8 @@
       {
         "a": "Brazil",
         "b": "Japan",
-        "sa": "",
-        "sb": "",
+        "sa": 2,
+        "sb": 1,
         "date": "2026-06-29T17:00:00Z"
       },
       {
