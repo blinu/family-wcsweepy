@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T17:51:02.939Z",
+  "updatedAt": "2026-06-30T19:52:50.485Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -415,8 +415,8 @@
       {
         "a": "Ivory Coast",
         "b": "Norway",
-        "sa": "",
-        "sb": "",
+        "sa": 1,
+        "sb": 2,
         "date": "2026-06-30T17:00:00Z"
       },
       {
