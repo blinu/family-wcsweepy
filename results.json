@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T22:54:49.397Z",
+  "updatedAt": "2026-06-30T03:28:58.945Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -401,8 +401,8 @@
       {
         "a": "Germany",
         "b": "Paraguay",
-        "sa": "",
-        "sb": "",
+        "sa": 4,
+        "sb": 5,
         "date": "2026-06-29T20:30:00Z"
       },
       {
