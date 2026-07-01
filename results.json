@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T21:26:17.596Z",
+  "updatedAt": "2026-07-01T23:12:56.162Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -443,8 +443,8 @@
       {
         "a": "Belgium",
         "b": "Senegal",
-        "sa": "",
-        "sb": "",
+        "sa": 3,
+        "sb": 2,
         "date": "2026-07-01T20:00:00Z"
       },
       {
