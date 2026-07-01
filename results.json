@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T16:25:17.301Z",
+  "updatedAt": "2026-07-01T19:51:32.747Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -436,8 +436,8 @@
       {
         "a": "England",
         "b": "DR Congo",
-        "sa": "",
-        "sb": "",
+        "sa": 2,
+        "sb": 1,
         "date": "2026-07-01T16:00:00Z"
       },
       {
