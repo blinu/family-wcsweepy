@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T19:21:24.800Z",
+  "updatedAt": "2026-07-02T21:03:35.846Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -457,8 +457,8 @@
       {
         "a": "Spain",
         "b": "Austria",
-        "sa": "",
-        "sb": "",
+        "sa": 3,
+        "sb": 0,
         "date": "2026-07-02T19:00:00Z"
       },
       {
