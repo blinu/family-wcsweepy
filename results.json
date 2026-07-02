@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T23:12:56.162Z",
+  "updatedAt": "2026-07-02T03:23:02.409Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -450,8 +450,8 @@
       {
         "a": "United States",
         "b": "Bosnia & Herz.",
-        "sa": "",
-        "sb": "",
+        "sa": 2,
+        "sb": 0,
         "date": "2026-07-02T00:00:00Z"
       },
       {
