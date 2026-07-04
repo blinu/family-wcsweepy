@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T02:41:52.387Z",
+  "updatedAt": "2026-07-04T06:45:44.994Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -492,8 +492,8 @@
       {
         "a": "Colombia",
         "b": "Ghana",
-        "sa": "",
-        "sb": "",
+        "sa": 1,
+        "sb": 0,
         "date": "2026-07-04T01:30:00Z"
       }
     ],
@@ -527,11 +527,32 @@
         "date": "2026-07-06T00:00:00Z"
       },
       {
+        "a": "Portugal",
+        "b": "Spain",
+        "sa": "",
+        "sb": "",
+        "date": "2026-07-06T19:00:00Z"
+      },
+      {
         "a": "United States",
         "b": "Belgium",
         "sa": "",
         "sb": "",
         "date": "2026-07-07T00:00:00Z"
+      },
+      {
+        "a": "Argentina",
+        "b": "Egypt",
+        "sa": "",
+        "sb": "",
+        "date": "2026-07-07T16:00:00Z"
+      },
+      {
+        "a": "Switzerland",
+        "b": "Colombia",
+        "sa": "",
+        "sb": "",
+        "date": "2026-07-07T20:00:00Z"
       }
     ],
     "qf": [],
