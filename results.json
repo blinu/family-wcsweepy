@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T19:08:20.910Z",
+  "updatedAt": "2026-07-04T20:55:03.268Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -501,8 +501,8 @@
       {
         "a": "Canada",
         "b": "Morocco",
-        "sa": "",
-        "sb": "",
+        "sa": 0,
+        "sb": 3,
         "date": "2026-07-04T17:00:00Z"
       },
       {
