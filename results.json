@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T20:57:14.987Z",
+  "updatedAt": "2026-07-05T22:59:47.081Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -515,8 +515,8 @@
       {
         "a": "Brazil",
         "b": "Norway",
-        "sa": "",
-        "sb": "",
+        "sa": 1,
+        "sb": 2,
         "date": "2026-07-05T20:00:00Z"
       },
       {
