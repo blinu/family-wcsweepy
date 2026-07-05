@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T02:52:28.962Z",
+  "updatedAt": "2026-07-05T07:23:31.616Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -555,7 +555,15 @@
         "date": "2026-07-07T20:00:00Z"
       }
     ],
-    "qf": [],
+    "qf": [
+      {
+        "a": "France",
+        "b": "Morocco",
+        "sa": "",
+        "sb": "",
+        "date": "2026-07-09T20:00:00Z"
+      }
+    ],
     "sf": [],
     "f": [],
     "third": []
