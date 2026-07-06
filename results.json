@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T19:52:46.604Z",
+  "updatedAt": "2026-07-06T21:26:54.395Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -529,8 +529,8 @@
       {
         "a": "Portugal",
         "b": "Spain",
-        "sa": "",
-        "sb": "",
+        "sa": 0,
+        "sb": 1,
         "date": "2026-07-06T19:00:00Z"
       },
       {
