@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T20:01:15.605Z",
+  "updatedAt": "2026-07-07T22:58:54.076Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -550,8 +550,8 @@
       {
         "a": "Switzerland",
         "b": "Colombia",
-        "sa": "",
-        "sb": "",
+        "sa": 4,
+        "sb": 3,
         "date": "2026-07-07T20:00:00Z"
       }
     ],
