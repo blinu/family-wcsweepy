@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T02:29:46.029Z",
+  "updatedAt": "2026-07-08T06:26:41.912Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -576,6 +576,13 @@
         "sa": "",
         "sb": "",
         "date": "2026-07-11T21:00:00Z"
+      },
+      {
+        "a": "Argentina",
+        "b": "Switzerland",
+        "sa": "",
+        "sb": "",
+        "date": "2026-07-12T01:00:00Z"
       }
     ],
     "sf": [],
