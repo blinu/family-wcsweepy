@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T21:04:16.191Z",
+  "updatedAt": "2026-07-10T22:58:03.417Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -566,8 +566,8 @@
       {
         "a": "Spain",
         "b": "Belgium",
-        "sa": "",
-        "sb": "",
+        "sa": 2,
+        "sb": 1,
         "date": "2026-07-10T19:00:00Z"
       },
       {
