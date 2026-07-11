@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T20:43:34.466Z",
+  "updatedAt": "2026-07-11T22:44:14.258Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -522,8 +522,8 @@
       {
         "a": "Mexico",
         "b": "England",
-        "sa": 2,
-        "sb": 3,
+        "sa": "",
+        "sb": "",
         "date": "2026-07-06T01:00:00Z"
       },
       {
