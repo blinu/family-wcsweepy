@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T22:44:14.258Z",
+  "updatedAt": "2026-07-12T02:33:12.434Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -573,8 +573,8 @@
       {
         "a": "Norway",
         "b": "England",
-        "sa": "",
-        "sb": "",
+        "sa": 1,
+        "sb": 2,
         "date": "2026-07-11T21:00:00Z"
       },
       {
