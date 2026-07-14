@@ -41,7 +41,7 @@ add("Czechia","Czech Republic");
 add("Türkiye","Turkey","Turkiye");
 add("Iran","IR Iran","Islamic Republic of Iran");
 add("Ivory Coast","Côte d'Ivoire","Cote d'Ivoire");
-add("Cape Verde","Cabo Verde");
+add("Cape Verde","Cabo Verde","Cabo Verde Islands","Cape Verde Islands");
 add("United States","USA","United States of America");
 add("Bosnia & Herz.","Bosnia and Herzegovina","Bosnia & Herzegovina","Bosnia-Herzegovina");
 add("Curaçao","Curacao");
@@ -71,7 +71,30 @@ let prev = {};
 try { prev = JSON.parse(readFileSync("results.json","utf8")); } catch {}
 const results  = prev.results  || Object.fromEntries(Object.keys(GROUPS).map(g=>[g,[null,null,null,null,null,null]]));
 const kickoffs = prev.kickoffs || {};
-const knockout = { r32:[], r16:[], qf:[], sf:[], f:[], third:[] };
+const ROUND_KEYS = ["r32","r16","qf","sf","f","third"];
+const knockout = Object.fromEntries(ROUND_KEYS.map(k=>[k,[]]));
+const prevKnockout = prev.knockout || {};
+const hasScore = m => m && m.sa !== "" && m.sb !== "" && m.sa != null && m.sb != null;
+const sameTeams = (a,b) => {
+  const aa=norm(a.a), ab=norm(a.b), ba=norm(b.a), bb=norm(b.b);
+  return aa && ab && ((aa===ba&&ab===bb)||(aa===bb&&ab===ba));
+};
+function previousMatch(round, fresh){
+  const prior = prevKnockout[round] || [];
+  return prior.find(p=>p.date && fresh.date && p.date===fresh.date) ||
+    prior.find(p=>sameTeams(p,fresh));
+}
+function addKnockout(round, fresh){
+  const prior = previousMatch(round, fresh) || {};
+  const freshScored = hasScore(fresh), priorScored = hasScore(prior);
+  knockout[round].push({
+    a: fresh.a || prior.a || "",
+    b: fresh.b || prior.b || "",
+    sa: freshScored ? fresh.sa : priorScored ? prior.sa : fresh.sa,
+    sb: freshScored ? fresh.sb : priorScored ? prior.sb : fresh.sb,
+    date: fresh.date || prior.date || ""
+  });
+}
 
 const res = await fetch("https://api.football-data.org/v4/competitions/WC/matches", {
   headers: { "X-Auth-Token": TOKEN }
@@ -93,7 +116,7 @@ for (const m of matches){
     if (!home && !away) continue;
     if (m.homeTeam?.name && !home) unmatched.add(m.homeTeam.name);
     if (m.awayTeam?.name && !away) unmatched.add(m.awayTeam.name);
-    knockout[STAGE[stage]].push({
+    addKnockout(STAGE[stage], {
       a: home||"", b: away||"",
       sa: finished?ft.home:"", sb: finished?ft.away:"",
       date: m.utcDate || ""
@@ -119,13 +142,30 @@ for (const m of matches){
   }
 }
 
-for (const k of Object.keys(knockout)) knockout[k].sort((x,y)=>String(x.date).localeCompare(String(y.date)));
+for (const round of ROUND_KEYS) {
+  const seen = new Set(knockout[round].map(m=>m.date ? `d:${m.date}` : `t:${norm(m.a)}:${norm(m.b)}`));
+  for (const prior of prevKnockout[round] || []) {
+    const key = prior.date ? `d:${prior.date}` : `t:${norm(prior.a)}:${norm(prior.b)}`;
+    if (!seen.has(key) && (prior.a || prior.b || hasScore(prior))) knockout[round].push(prior);
+  }
+  knockout[round].sort((x,y)=>String(x.date).localeCompare(String(y.date)));
+}
 
 if (unmatched.size) console.warn("\u26a0 Unmatched team names (add to ALIAS):", [...unmatched].join(", "));
 
-writeFileSync("results.json", JSON.stringify({
+const next = {
   updatedAt: new Date().toISOString(),
   source: "football-data.org",
   results, kickoffs, knockout
-}, null, 2));
-console.log(`results.json written \u2014 ${placed} group results, ${Object.keys(kickoffs).length} kick-off times, ${koMatches} knockout matches.`);
+};
+const comparable = data => JSON.stringify({
+  source: data.source,
+  results: data.results,
+  kickoffs: data.kickoffs,
+  knockout: data.knockout
+});
+if (prev.updatedAt && comparable(prev) === comparable(next)) next.updatedAt = prev.updatedAt;
+
+writeFileSync("results.json", JSON.stringify(next, null, 2));
+const changed = next.updatedAt === prev.updatedAt ? "no data changes" : "data changed";
+console.log(`results.json written \u2014 ${placed} group results, ${Object.keys(kickoffs).length} kick-off times, ${koMatches} knockout matches, ${changed}.`);

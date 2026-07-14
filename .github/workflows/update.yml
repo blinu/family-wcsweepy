@@ -1,9 +1,11 @@
 name: Update World Cup results
 
-# Runs every 2 hours, and you can also trigger it by hand from the Actions tab.
+# Runs every 2 hours, with extra checks during the remaining knockout match windows.
+# You can also trigger it by hand from the Actions tab.
 on:
   schedule:
     - cron: "0 */2 * * *"
+    - cron: "*/15 18-23 14-19 7 *"
   workflow_dispatch:
 
 permissions:
