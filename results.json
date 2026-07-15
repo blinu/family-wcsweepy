@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T22:55:04.791Z",
+  "updatedAt": "2026-07-15T21:31:54.948Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -603,8 +603,8 @@
       {
         "a": "England",
         "b": "Argentina",
-        "sa": "",
-        "sb": "",
+        "sa": 1,
+        "sb": 2,
         "date": "2026-07-15T19:00:00Z"
       }
     ],
