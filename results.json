@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T21:31:54.948Z",
+  "updatedAt": "2026-07-16T06:15:16.767Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -611,7 +611,7 @@
     "f": [
       {
         "a": "Spain",
-        "b": "",
+        "b": "Argentina",
         "sa": "",
         "sb": "",
         "date": "2026-07-19T19:00:00Z"
@@ -620,7 +620,7 @@
     "third": [
       {
         "a": "France",
-        "b": "",
+        "b": "England",
         "sa": "",
         "sb": "",
         "date": "2026-07-18T21:00:00Z"
