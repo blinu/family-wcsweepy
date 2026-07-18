@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T06:15:16.767Z",
+  "updatedAt": "2026-07-18T23:11:25.652Z",
   "source": "football-data.org",
   "results": {
     "A": [
@@ -621,8 +621,8 @@
       {
         "a": "France",
         "b": "England",
-        "sa": "",
-        "sb": "",
+        "sa": 4,
+        "sb": 6,
         "date": "2026-07-18T21:00:00Z"
       }
     ]
